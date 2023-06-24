@@ -5,6 +5,8 @@ Description: A WordPress plugin to display a Valorant account lookup form on pro
 Version: 1.0.0
 Author: Md. Shishir Ahmed
 Author URI: https://www.shishir1337.com
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 
 // Enqueue the necessary scripts and styles
