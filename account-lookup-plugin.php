@@ -23,19 +23,26 @@ function account_lookup_shortcode() {
   ob_start();
   ?>
   <div class="container mx-auto p-8">
-    <h1 class="text-2xl font-bold mb-4">Account Lookup</h1>
-    <div class="flex flex-col space-y-4">
+  <h1 class="text-2xl font-bold mb-4">Valorant Account</h1>
+  <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center">
+    <div class="flex-grow">
       <label for="ign" class="font-medium">IGN:</label>
       <input id="ign" type="text" class="rounded-md border border-gray-300 p-2" placeholder="Enter IGN">
+    </div>
+    <div class="flex-grow">
       <label for="tag" class="font-medium">Tag:</label>
       <input id="tag" type="text" class="rounded-md border border-gray-300 p-2" placeholder="Enter Tag">
-      <button id="lookupBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md">OK</button>
     </div>
-
-    <div id="result" class="mt-8">
-      <!-- Result will be displayed here -->
+    <div>
+      <button id="lookupBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md ml-4">OK</button>
     </div>
   </div>
+
+  <div id="result" class="mt-8">
+    <!-- Result will be displayed here -->
+  </div>
+</div>
+
   <?php
   return ob_get_clean();
 }
