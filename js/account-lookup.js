@@ -26,26 +26,27 @@
                 </div>
               </div>
             `;
-            
-            // Populate custom field value
-            const customFieldInput = document.querySelector('input[name="wapf\\[field_6496e37ba13d6\\]"]');
+
+            // Populate custom field values
+            const customFieldInput = document.getElementById('custom_field');
             if (customFieldInput) {
               customFieldInput.value = `${data.data.name}#${data.data.tag}`;
             }
-
           } else {
             const resultContainer = document.getElementById('result');
-            resultContainer.innerHTML = '<p class="text-red-600">Account not found.</p>';
+            resultContainer.innerHTML = '<p class="text-red-500">Account not found. Please check the provided IGN and Tag.</p>';
 
             // Clear custom field value
-            const customFieldInput = document.querySelector('input[name="wapf\\[field_6496e37ba13d6\\]"]');
+            const customFieldInput = document.getElementById('custom_field');
             if (customFieldInput) {
               customFieldInput.value = '';
             }
           }
         })
         .catch(error => {
-          console.error('Error:', error);
+          console.error(error);
+          const resultContainer = document.getElementById('result');
+          resultContainer.innerHTML = '<p class="text-red-500">An error occurred. Please try again later.</p>';
         });
     });
   });
