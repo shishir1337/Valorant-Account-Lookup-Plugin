@@ -22,9 +22,9 @@ add_action( 'wp_enqueue_scripts', 'account_lookup_enqueue_scripts' );
 function account_lookup_shortcode() {
   ob_start();
   ?>
-  <div class="container mx-auto p-8">
+<div class="container mx-auto p-8">
   <h1 class="text-2xl font-bold mb-4">Valorant Account</h1>
-  <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center">
+  <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center justify-center">
     <div class="flex-grow">
       <label for="ign" class="font-medium">IGN:</label>
       <input id="ign" type="text" class="rounded-md border border-gray-300 p-2" placeholder="Enter IGN">
@@ -33,8 +33,8 @@ function account_lookup_shortcode() {
       <label for="tag" class="font-medium">Tag:</label>
       <input id="tag" type="text" class="rounded-md border border-gray-300 p-2" placeholder="Enter Tag">
     </div>
-    <div>
-      <button id="lookupBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md ml-4">OK</button>
+    <div class="flex justify-center items-center mt-2">
+    <button id="lookupBtn" class="bg-green-500 px-4 py-2 rounded-md hover:text-green-500	">Add</button>
     </div>
   </div>
 
